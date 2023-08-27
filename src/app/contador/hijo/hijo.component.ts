@@ -17,7 +17,6 @@ export class HijoComponent implements OnInit {
 
   ngOnInit (): void {
     this.store.select('contador').subscribe(contador => {
-      console.log(contador);
       this.contador$ = of(contador);
     });
   }

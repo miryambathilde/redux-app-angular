@@ -18,7 +18,6 @@ export class AppComponent {
   constructor (private store: Store<AppState>) {
     // nos suscribimos a los cambios sólo del contador
     this.store.select('contador').subscribe(contador => {
-      console.log(contador);
       this.contador$ = of(contador);
     });
   }
