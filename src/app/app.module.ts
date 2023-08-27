@@ -23,7 +23,10 @@ import { NietoComponent } from './contador/nieto/nieto.component';
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({ contador: contadorReducer }),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25, // Retains last 25 states
+      logOnly: environment.production // Restrict extension to log-only mode
+    }),
   ],
   providers: [],
   bootstrap: [ AppComponent ]
