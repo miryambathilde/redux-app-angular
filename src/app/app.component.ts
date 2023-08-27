@@ -2,10 +2,8 @@ import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import * as actions from './contador/contador.actions';
 import { Observable, of } from 'rxjs';
+import { AppState } from './app.reducer';
 
-interface AppState {
-  contador: number;
-}
 
 @Component({
   selector: 'app-root',

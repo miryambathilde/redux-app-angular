@@ -1,5 +1,5 @@
 <h3>Contador</h3>
-<h4>{{contador}}</h4>
+<h4>{{contador$ | async}}</h4>
 
 <div class="row-text-center">
   <div class="col">
@@ -12,9 +12,6 @@
 
 <div class="row text-center">
   <div class="col">
-    <!-- aqui no se actualiza el padre, sólo el hijo con el nieto -->
-    <!-- <app-nieto [contador]="contador" (resetContador)="contador = $event"></app-nieto> -->
-    <!-- aqui se actualiza el padre, el hijo y el nieto al darle al reset del nieto -->
-    <app-nieto [contador]="contador" (resetContador)="resetNieto($event)"></app-nieto>
+    <app-nieto></app-nieto>
   </div>
 </div>
