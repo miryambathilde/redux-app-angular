@@ -18,10 +18,10 @@ export class AppComponent {
   contador$!: Observable<number>
 
   constructor (private store: Store<AppState>) {
-    // nos suscribimos a los cambios
-    this.store.subscribe((state: AppState) => {
-      console.log(state);
-      this.contador$ = of(state.contador);
+    // nos suscribimos a los cambios sólo del contador
+    this.store.select('contador').subscribe(contador => {
+      console.log(contador);
+      this.contador$ = of(contador);
     });
   }
 
